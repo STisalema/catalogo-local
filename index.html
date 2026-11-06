@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provedor de Internet - Provedor de Internet</title>
+    <style>
+        :root {
+            --primary-color: #25D366; /* Verde WhatsApp */
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: var(--light-color); color: var(--dark-color); padding-bottom: 80px; }
+        
+        /* Encabezado e Información del Local */
+        header { background: white; text-align: center; padding: 20px; border-bottom: 2px solid #edf2f7; }
+        .logo-placeholder { width: 80px; height: 80px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .info-local { font-size: 0.9rem; margin-top: 8px; color: #718096; }
+        
+        /* Grilla de Productos */
+        .catalogo-container { max-width: 600px; margin: 20px auto; padding: 0 15px; }
+        .producto-card { background: white; border-radius: 12px; margin-bottom: 15px; display: flex; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .producto-img { width: 110px; height: 110px; background: #edf2f7; object-fit: cover; }
+        .producto-detalles { padding: 12px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .producto-titulo { font-size: 1.1rem; font-weight: 600; color: #1a202c; }
+        .producto-precio { color: var(--dark-color); font-weight: bold; font-size: 1.2rem; margin: 4px 0; }
+        
+        /* Botón de Pedido Individual */
+        .btn-pedir { display: inline-flex; align-items: center; justify-content: center; background: var(--primary-color); color: white; border: none; padding: 8px 12px; border-radius: 6px; font-weight: bold; text-decoration: none; font-size: 0.85rem; align-self: flex-start; cursor: pointer; }
+
+        /* Barra de Acción Inferior Fija */
+        .floating-footer { position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 15px; box-shadow: 0 -4px 10px rgba(0,0,0,0.1); text-align: center; }
+        .btn-whatsapp-general { display: block; max-width: 500px; margin: 0 auto; background: var(--primary-color); color: white; text-decoration: none; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-placeholder">LOGO</div>
+        <h1>Nombre del Negocio</h1>
+        <div class="info-local">
+            <p>📍 Dirección del Local, Ambato</p>
+            <p>🕒 Horario: Lunes a Sábado - 09:00 a 18:30</p>
+        </div>
+    </header>
+
+    <main class="catalogo-container">
+        <!-- Producto 1 -->
+        <div class="producto-card">
+            <div class="producto-img" style="background-image: url('ruta-a-la-foto1.jpg');"></div>
+            <div class="producto-detalles">
+                <div>
+                    <h3 class="producto-titulo">Nombre del Producto 1</h3>
+                </div>
+                <div>
+                    <p class="producto-precio">$0.00</p>
+                    <!-- Enlace directo con texto predefinido a WhatsApp -->
+                    <a href="https://wa.me" target="_blank" class="btn-pedir">📱 Pedir por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto-card">
+            <div class="producto-img" style="background-image: url('ruta-a-la-foto2.jpg');"></div>
+            <div class="producto-detalles">
+                <div>
+                    <h3 class="producto-titulo">Nombre del Producto 2</h3>
+                </div>
+                <div>
+                    <p class="producto-precio">$0.00</p>
+                    <a href="https://wa.me" target="_blank" class="btn-pedir">📱 Pedir por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="floating-footer">
+        <a href="https://wa.me" target="_blank" class="btn-whatsapp-general">
+            💬 Escribir al WhatsApp del Negocio
+        </a>
+    </div>
+
+</body>
+</html>
